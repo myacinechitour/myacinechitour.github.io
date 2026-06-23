@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yacine Chitour</title>
+<meta name="description" content="Yacine Chitour — economic and historical sociology. Ph.D. student in Sociology, Princeton University.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F7F7F5;
+    --ink:#1C1C1A;
+    --muted:#6E6E6A;
+    --label:#56564F;
+    --rule:#E5E5E1;
+    --accent:#1F4E5F;    
+    --maxw:800px;
+    --aside:150px;
+    --gap:2.4rem;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Spectral",Georgia,"Times New Roman",serif;
+    font-size:19px;line-height:1.66;
+    font-feature-settings:"onum" 1;  
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:3.2rem 1.6rem 3.5rem;}
+
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s ease;}
+  a:hover{border-bottom-color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:1px;}
+
+  /* ---------- Language switch ---------- */
+  .lang{
+    text-align:right;font-size:.8rem;font-variant:small-caps;letter-spacing:.1em;
+    color:var(--muted);margin-bottom:1.6rem;
+  }
+  .lang button{
+    font:inherit;font-variant:small-caps;letter-spacing:.1em;
+    background:none;border:0;color:var(--muted);cursor:pointer;padding:0 .15rem;
+  }
+  .lang button:hover{color:var(--accent);}
+  .lang .div{color:var(--rule);}
+  body.lang-en #l-en,body.lang-fr #l-fr{color:var(--ink);border-bottom:1px solid var(--ink);}
+  body.lang-en .fr,body.lang-fr .en{display:none;}
+
+  /* ---------- Two-column "marginalia" grid ---------- */
+  .row{display:grid;grid-template-columns:var(--aside) 1fr;column-gap:var(--gap);}
+  .aside{text-align:right;}
+  .label{
+    color:var(--label);font-size:.82rem;font-weight:600;
+    font-variant:small-caps;letter-spacing:.14em;margin:.28rem 0 0;
+  }
+
+  /* ---------- Header ---- */
+  header{align-items:start;}
+  .portrait{
+    display:inline-block;position:relative;width:122px;height:122px;
+    border:1px solid var(--rule);background:var(--rule);overflow:hidden;vertical-align:top;
+  }
+  .portrait img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;}
+  .portrait-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:2.1rem;color:#B7B6AF;letter-spacing:.04em;}
+  h1{font-weight:600;font-size:2.15rem;line-height:1.08;margin:0 0 .35rem;letter-spacing:.005em;}
+  h1 .sc{font-variant:small-caps;font-feature-settings:"smcp" 1;letter-spacing:.025em;}
+  .subtitle{margin:0 0 .55rem;font-style:italic;font-size:1.08rem;color:var(--muted);}
+  .meta{margin:0;font-size:.9rem;color:var(--muted);}
+  .meta a{color:var(--accent);}
+  .meta .sep{color:var(--rule);margin:0 .4rem;}
+
+  hr{border:0;border-top:1px solid var(--rule);margin:2.1rem 0 0;}
+
+  /* -----sections ---------- */
+  section.row{margin-top:2.4rem;}
+  .body p{margin:0 0 1rem;}
+  .body p:last-child{margin-bottom:0;}
+
+  .paper{margin:0 0 1.4rem;}
+  .paper:last-child{margin-bottom:0;}
+  .paper .title{font-weight:600;}
+  .paper .by{color:var(--muted);}
+  .paper .note{display:block;font-size:.85rem;color:var(--muted);font-style:italic;margin-top:.12rem;}
+  .paper .links{font-size:.86rem;}
+
+  .updated{font-size:.82rem;color:var(--muted);font-variant:small-caps;letter-spacing:.06em;}
+  .contact-line{margin:0 0 .4rem;}
+  .contact-line:last-child{margin-bottom:0;}
+  .contact-line .k{color:var(--muted);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:3.4rem;padding-top:1rem;border-top:1px solid var(--rule);
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;
+    font-size:.84rem;color:var(--muted);
+  }
+  footer a{color:var(--muted);border:0;}
+  footer a:hover{color:var(--accent);}
+  .pilcrow{font-size:1.1rem;line-height:1;}
+
+  /* ---------- Mobile ---------- */
+  @media (max-width:680px){
+    .wrap{padding:2.2rem 1.25rem;}
+    .row{grid-template-columns:1fr;column-gap:0;}
+    .aside{text-align:left;}
+    header .aside{margin-bottom:1.1rem;}
+    .label{margin:0 0 .55rem;}
+    h1{font-size:1.85rem;}
+  }
+
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body class="lang-en">
+<div class="wrap" id="top">
+
+  <div class="lang">
+    <button id="l-en" onclick="document.body.className='lang-en'">English</button>
+    <span class="div">/</span>
+    <button id="l-fr" onclick="document.body.className='lang-fr'">Français</button>
+  </div>
+
+  <!-- ========header =================== -->
+
+  <header class="row">
+    <div class="aside">
+      <div class="portrait">
+        <span class="portrait-fallback">YC</span>
+        <img src="images/profile.jpg" alt="Yacine Chitour" onerror="this.remove()">
+      </div>
+    </div>
+    <div class="main">
+      <h1>Yacine <span class="sc">Chitour</span></h1>
+      <p class="subtitle"><span class="en">Ph.D student in Sociology</span><span class="fr">Doctorant en sociologie</span></p>
+      <p class="meta">
+        <a href="mailto:yacine.chitour@princeton.edu">yacine.chitour@princeton.edu</a>
+        <span class="sep">·</span><a href="cv.pdf">CV (PDF)</a>
+      </p>
+    </div>
+  </header>
+
+  <hr>
+
+  <!-- =================== About me =================== -->
+  <section class="row" id="about">
+    <div class="aside"><p class="label"><span class="en">About</span><span class="fr">À&nbsp;propos</span></p></div>
+    <div class="body">
+      <div class="en">
+        <p>I am a first-year Ph.D. student in Sociology at Princeton University. My research interests include  economic sociology, comparative-historical sociology, computational social science and sociological theory. So far, my work has focused on the persecution and dispossession of Jewish populations in twentieth-century
+           Europe — and what persecution reveals about violence, property relations and the economy.</p>
+        <p>I grew up in Algiers and studied in Paris, at the École Normale Supérieure and the EHESS,
+           before spending a year as a visiting student at Columbia University.</p>
+      </div>
+      <div class="fr">
+        <p>Je suis doctorant en sociologie à l'université de Princeton. Je travaille à la croisée de la sociologie historique et de la sociologie économique, mais je m'intéresse également aux sciences sociales computationnelles. Jusqu'ici, mes recherches ont porté sur la persécution et la spoliation des populations juives
+           dans l'Europe du XX<sup>e</sup>&nbsp;siècle — et sur les liens entre persécution et structures économiques.</p>
+        <p>J'ai grandi à Alger et étudié à Paris, à l'École normale supérieure et à l'EHESS, avant une
+           année comme lecteur à l'université Columbia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== RESEARCH =================== -->
+  <section class="row" id="research">
+    <div class="aside"><p class="label"><span class="en">Research</span><span class="fr">Recherche</span></p></div>
+    <div class="body">
+      <div class="paper">
+        <span class="title">Antisemitism in Practice: The Destruction of Two “Jewish” Stores in 1930s France</span>
+        <span class="by"><span class="en"> — with Pauline Funk</span><span class="fr"> — avec Pauline Funk</span></span>
+        <span class="note">20 &amp; 21. Revue d’Histoire, 163 (2024): 19–35</span>
+        <span class="links"><a href="https://doi.org/10.3917/vin.163.0019" target="_blank" rel="noopener">DOI</a></span>
+      </div>
+      <div class="paper">
+        <span class="title">Un antisémitisme maison. Mise en œuvre d’une politique salariale anti-juive (France, 1940-1944)</span>
+        <span class="note"><span class="en">Under review · French draft available on request</span><span class="fr">Soumis</span></span>
+      </div>
+
+  </section>
+
+  <!-- =================== CV =================== -->
+  <section class="row" id="cv">
+    <div class="aside"><p class="label">CV</p></div>
+    <div class="body">
+      <p>
+        <span class="en">You can find my CV <a href="cv.pdf" target="_blank" rel="noopener">here</a>. </span>
+        <span class="fr">Vous trouverez mon CV <a href="cv.pdf" target="_blank" rel="noopener">ici</a>. </span>
+        <span class="updated"><span class="en">Updated June 2026</span><span class="fr">Mis à jour en juin 2026</span></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== to contact me =================== -->
+  <section class="row" id="contact">
+    <div class="aside"><p class="label">Contact</p></div>
+    <div class="body">
+      <p class="contact-line"><a href="mailto:yacine.chitour@princeton.edu">yacine.chitour@princeton.edu</a></p>
+      <p class="contact-line"><span class="k"><span class="en">Department of Sociology</span><span class="fr">Département de sociologie</span></span><br>
+         Princeton University, Princeton, NJ</p>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <span>© 2026 Yacine Chitour</span>
+    <a href="#top" class="pilcrow" aria-label="Back to top">❡</a>
+  </footer>
+
+</div>
+</body>
+</html>
